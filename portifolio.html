@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - AutoSolutions</title>
+<meta name="description" content="Check out our portfolio of automation, websites, logos, and digital architecture projects.">
+<meta name="keywords" content="portfolio, automation projects, websites, logo design, digital architecture">
+<meta name="author" content="Isaac Feitosa">
+
+<!-- Botpress Chat -->
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script>
+window.botpressWebChat.init({
+  host: 'https://YOUR_BOTPRESS_SERVER_URL',
+  botId: 'YOUR_BOT_ID',
+  enableReset: true
+});
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+:root{--primary:#0078d4;--accent:#f9fafb;--text:#111827;--card-bg:white;--shadow:rgba(0,0,0,0.1);}
+body{background:var(--accent);color:var(--text);}
+header nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background:white;box-shadow:0 2px 10px var(--shadow);}
+header nav .logo{font-weight:700;font-size:1.8rem;color:var(--primary);}
+header nav ul{list-style:none;display:flex;gap:1.5rem;}
+header nav ul li a{text-decoration:none;color:var(--text);font-weight:500;padding:0.3rem 0.6rem;border-radius:6px;}
+header nav ul li a:hover, header nav ul li a.active{background:var(--primary);color:white;}
+
+section{padding:4rem 5%;text-align:center;}
+section h2{color:var(--primary);margin-bottom:2rem;font-weight:700;}
+.portfolio-wrapper{display:flex;overflow-x:auto;scroll-behavior:smooth;gap:1.5rem;padding-bottom:1rem;}
+.portfolio-wrapper::-webkit-scrollbar{display:none;}
+.portfolio-card{flex:0 0 300px;background:var(--card-bg);border-radius:20px;padding:1rem;box-shadow:0 8px 20px var(--shadow);}
+.portfolio-card img{width:100%;border-radius:12px;margin-bottom:1rem;}
+.portfolio-card h3{color:var(--primary);margin-bottom:0.5rem;}
+.portfolio-card p{color:#333;}
+
+footer{padding:2rem 5%;background:#111827;color:white;text-align:center;}
+footer a{color:white;margin:0 0.5rem;text-decoration:none;}
+footer a:hover{color:#00bcf2;}
+
+#botpress-chat-btn{position:fixed;bottom:20px;right:20px;background:var(--primary);color:white;border:none;border-radius:50%;width:60px;height:60px;font-size:1.5rem;cursor:pointer;box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+#botpress-chat-btn:hover{transform:scale(1.1);}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">AutoSolutions</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html" class="active">Portfolio</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+<h2>Our Portfolio</h2>
+<div class="portfolio-wrapper">
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Shopify Recovery</h3><p>+30% sales in one month via automation.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1591696331111-9f2c3d51f528?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Email Funnel</h3><p>200+ leads/week generated for SaaS client.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1581091870625-3095b63b0074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>WhatsApp Automation</h3><p>3x engagement improvement via flows.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1581092333935-ef77618e5027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Website Project</h3><p>Modern responsive website for startup launch.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Logo Design</h3><p>Brand identity design for e-commerce client.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1612832021362-b9f872cb0a3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Digital Architecture</h3><p>Implemented automated workflow system for SMB.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>CRM Integration</h3><p>Automated CRM connected with marketing channels.</p></div>
+<div class="portfolio-card"><img src="https://images.unsplash.com/photo-1581091012184-2df3b4be75e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt=""><h3>Automation Dashboard</h3><p>Custom dashboard for real-time analytics and reports.</p></div>
+</div>
+</section>
+
+<footer>
+<p>© 2025 AutoSolutions. All rights reserved.</p>
+<div><a href="#">LinkedIn</a> | <a href="#">Instagram</a> | <a href="https://api.whatsapp.com/send?phone=5579988177341">WhatsApp</a></div>
+</footer>
+
+<button id="botpress-chat-btn">💬</button>
+<script>
+document.getElementById('botpress-chat-btn').addEventListener('click',()=>{
+  window.botpressWebChat.sendEvent({type:'show'});
+});
+</script>
+
+</body>
+</html>
